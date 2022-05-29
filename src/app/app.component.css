@@ -1,0 +1,86 @@
+
+#cala
+{
+    text-align: center;
+    border: 2px solid black;
+    min-height: 1100px;
+}
+
+#logo
+{
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 20%;
+}
+
+#sidebar
+{
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 80%;
+}
+
+#wyborgry
+{
+    background-color: hotpink;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#wyborregionu
+{
+    background-color: hotpink;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#kontent
+{
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#gornypasek
+{
+    min-height: 12%;
+}
+
+#dolnypasek
+{
+    height: 88%;
+}
+
+h3
+{
+    font-style: italic;
+    font-family: fantasy;
+}
+
+img
+{
+    margin-top: 30px;
+}
+
+button{
+    height: 60px;
+    width: 150px;
+    font-size: 150%;
+    color: white;
+}
+
+#tryby
+{
+    margin-top: auto;
+    margin-bottom: 10%;
+}
+
+#newform{
+    font-size: 130%;
+}
+
+#zapiszsie{
+    display: none;
+}

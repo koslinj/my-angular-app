@@ -2,12 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MyAngularApp</title>
+  <title>Zadanie</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    function dark() {
+      document.body.style.backgroundColor = "black"
+      document.body.style.color = "white"
+      document.getElementById("sidebar").style.backgroundColor = "darkblue"
+      document.getElementById("logo").style.backgroundColor = "blue"
+      document.getElementById("wyborgry").style.backgroundColor = "MidnightBlue"
+      document.getElementById("wyborregionu").style.backgroundColor = "MidnightBlue"
+      document.getElementById("kontent").style.backgroundColor = "cornflowerblue"
+  }
+    function light() {
+      document.body.style.backgroundColor = "beige"
+      document.body.style.color = "black"
+      document.getElementById("sidebar").style.backgroundColor = "lightblue"
+      document.getElementById("logo").style.backgroundColor = "yellow"
+      document.getElementById("wyborgry").style.backgroundColor = "hotpink"
+      document.getElementById("wyborregionu").style.backgroundColor = "hotpink"
+      document.getElementById("kontent").style.backgroundColor = "beige"
+  }
+
+  function hide()
+  {
+      document.getElementById('finalny').hidden=true;
+      let a = document.getElementById("newform")
+      let b = '<h1>Gratulacje!!!<br>Udało ci się zarejestrować</h1>'
+      a.insertAdjacentHTML('beforeend', b);
+  }
+
+  function appendForm()
+  {
+      let a = document.getElementById("newform")
+      let b = `<div id="finalny" class="row">
+    <div class="col-xs-12 col-lg-12" id="lol">
+        <form (ngSubmit)="dodajStudenta($event)">
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label>IMIE</label>
+                    <input name="imie" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>NAZWISKO</label>
+                    <input name="nazwisko" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>TELEFON</label>
+                    <input name="nazwisko" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>NICK</label>
+                    <input name="nick" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>EMAIL</label>
+                    <input name="email" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>DATA URODZENIA</label>
+                    <input name="email" type="date">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>PŁEĆ:</label><br>
+                    <label>mężczyzna</label>
+                    <input name="email" type="radio" value="mężczyzna"><br>
+                    <label>kobieta</label>
+                    <input name="email" type="radio" value="kobieta">
+                </div>
+             </div>
+             <hr>
+             <div class="row">
+                <div class="col-xs-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-4form-group">
+                        </div>
+                        <div class="col-sm-4form-group">
+                            <button class="btn btn-success" type="button" onclick="hide()">ZALOGUJ</button>
+                            <button class="btn btn-danger" type="button">MOŻE BYĆ TU WYLOGUJ</button>
+                            <button class="btn btn-primary" type="reset">WYCZYŚĆ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>`
+      a.insertAdjacentHTML('beforeend', b);
+  }
+
+  </script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+
+
+    <p id="loginfo" *ngFor="let daneStudenta of studenci">
+        Zalogowany jako:<br>
+        IMIE: &nbsp;<span>{{daneStudenta.imie}}</span><br>
+        NAZWISKO: &nbsp;<span>{{daneStudenta.nazwisko}}</span><br>
+        NICK: &nbsp;<span>{{daneStudenta.nick}}</span><br>
+        E-MAIL: &nbsp;<span>{{daneStudenta.email}}</span><br>
+    </p>
+
+<div class="row" id="rej">
+    <div class="col-xs-12 col-lg-12" id="lol">
+        <form (ngSubmit)="dodajStudenta($event)" [formGroup]="form">
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label>IMIE</label><br>
+                    <input size="15" name="imie" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>NAZWISKO</label><br>
+                    <input size="15" name="nazwisko" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label onloadeddata="UkryjZapiszSie()">NICK</label><br>
+                    <input size="15" name="nick" type="text">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>HASLO</label><br>
+                    <input size="15" name="haslo" type="password" formControlName="password">
+                    <div class="errors" *ngIf="form.get('password').invalid && (form.get('password').touched || form.get('password').dirty)">
+                        <div *ngIf="form.get('password').hasError('required')">
+                          Należy wpisać hasło!!!
+                        </div>
+                        <div class="error-text" *ngIf="form.get('password').hasError('passwordStrength')">
+                         {{form.get('password').errors['passwordStrength']}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>EMAIL</label><br>
+                    <input size="15" name="email" type="text" formControlName="email">
+                    <div class="errors" *ngIf="form.get('email').invalid && (form.get('email').touched || form.get('email').dirty)">
+                        <div *ngIf="form.get('email').hasError('required')">
+                          Należy wpisać email!!!
+                        </div>
+                        <div class="error-text" *ngIf="form.get('email').hasError('emailStrength')">
+                         {{form.get('email').errors['emailStrength']}}
+                        </div>
+                    </div>
+                </div>
+             </div>
+             <hr>
+             <div class="row">
+                <div class="col-xs-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-4form-group">
+                        </div>
+                        <div class="col-sm-4form-group">
+                            <button *ngIf="form.get('password').valid && form.get('email').valid" class="btn btn-success" type="submit" onclick="document.getElementById('rej').hidden=true;document.getElementById('zapiszsie').style.display='initial'">ZALOGUJ</button>
+                            <button class="btn btn-danger" type="button">MOŻE BYĆ TU WYLOGUJ</button>
+                            <button class="btn btn-primary" type="reset">WYCZYŚĆ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
