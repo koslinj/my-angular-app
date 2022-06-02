@@ -62,3 +62,50 @@ export const EmailStrengthValidator = function (control: AbstractControl): Valid
 
   return null;
 }
+
+export const NameStrengthValidator = function (control: AbstractControl): ValidationErrors | null {
+
+  let value: string = control.value || '';
+
+  if (!value) {
+    return null
+  }
+
+  let upperCaseCharacters = /[A-Z]+/g
+  if (upperCaseCharacters.test(value) === false) {
+    return { nameStrength: `Imię musi zawierać wielką literę` };
+  }
+
+  return null;
+}
+
+export const SurnameStrengthValidator = function (control: AbstractControl): ValidationErrors | null {
+
+  let value: string = control.value || '';
+
+  if (!value) {
+    return null
+  }
+
+  let upperCaseCharacters = /[A-Z]+/g
+  if (upperCaseCharacters.test(value) === false) {
+    return { SurnameStrength: `Nazwisko musi zawierać wielką literę` };
+  }
+
+  return null;
+}
+
+export const NickStrengthValidator = function (control: AbstractControl): ValidationErrors | null {
+
+  let value: string = control.value || '';
+
+  if (!value) {
+    return null
+  }
+
+  if (value.length < 3) {
+    return { NickStrength: `Nick jest za krótki` };
+  }
+
+  return null;
+}

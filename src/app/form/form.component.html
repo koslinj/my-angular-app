@@ -13,16 +13,40 @@
         <form (ngSubmit)="dodajStudenta($event)" [formGroup]="form">
             <div class="row">
                 <div class="col-sm-12 form-group">
-                    <label>IMIE</label><br>
-                    <input size="15" name="imie" type="text">
+                    <label>IMIĘ</label><br>
+                    <input size="15" name="imie" type="text" formControlName = "name">
+                    <div class="errors" *ngIf="form.get('name').invalid && (form.get('name').touched || form.get('name').dirty)">
+                        <div *ngIf="form.get('name').hasError('required')">
+                          Należy wpisać imię!!!
+                        </div>
+                        <div class="error-text" *ngIf="form.get('name').hasError('nameStrength')">
+                         {{form.get('name').errors['nameStrength']}}
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 form-group">
                     <label>NAZWISKO</label><br>
-                    <input size="15" name="nazwisko" type="text">
+                    <input size="15" name="nazwisko" type="text" formControlName = "surname">
+                    <div class="errors" *ngIf="form.get('surname').invalid && (form.get('surname').touched || form.get('surname').dirty)">
+                        <div *ngIf="form.get('surname').hasError('required')">
+                          Należy wpisać nazwisko!!!
+                        </div>
+                        <div class="error-text" *ngIf="form.get('surname').hasError('SurnameStrength')">
+                         {{form.get('surname').errors['SurnameStrength']}}
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 form-group">
                     <label onloadeddata="UkryjZapiszSie()">NICK</label><br>
-                    <input size="15" name="nick" type="text">
+                    <input size="15" name="nick" type="text" formControlName="nick">
+                    <div class="errors" *ngIf="form.get('nick').invalid && (form.get('nick').touched || form.get('nick').dirty)">
+                        <div *ngIf="form.get('nick').hasError('required')">
+                          Należy wpisać nick!!!
+                        </div>
+                        <div class="error-text" *ngIf="form.get('nick').hasError('NickStrength')">
+                         {{form.get('nick').errors['NickStrength']}}
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 form-group">
                     <label>HASLO</label><br>
@@ -56,7 +80,10 @@
                         <div class="col-4form-group">
                         </div>
                         <div class="col-sm-4form-group">
-                            <button *ngIf="form.get('password').valid && form.get('email').valid" class="btn btn-success" type="submit" onclick="document.getElementById('rej').hidden=true;document.getElementById('zapiszsie').style.display='initial'">ZALOGUJ</button>
+                            <button *ngIf="form.get('password').valid && form.get('email').valid && form.get('name').valid && form.get('surname').valid && form.get('nick').valid; else elseBlock"  class="btn btn-success" type="submit" onclick="document.getElementById('rej').hidden=true;PokazPrzycisk();ZmienPodpowiedz1()">ZALOGUJ</button>
+                            <ng-template #elseBlock>
+                                <button class="btn btn-success" type="submit" [disabled]="true">ZALOGUJ</button>
+                            </ng-template>
                             <button class="btn btn-danger" type="button">MOŻE BYĆ TU WYLOGUJ</button>
                             <button class="btn btn-primary" type="reset">WYCZYŚĆ</button>
                         </div>

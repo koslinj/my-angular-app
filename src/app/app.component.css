@@ -27,6 +27,7 @@
     background-color: hotpink;
     border: 2px solid black;
     border-radius: 4px;
+    min-height: 400px
 }
 
 #wyborregionu
@@ -34,6 +35,7 @@
     background-color: hotpink;
     border: 2px solid black;
     border-radius: 4px;
+    min-height: 400px
 }
 
 #kontent
@@ -43,20 +45,37 @@
     border-radius: 4px;
 }
 
+#kontent2
+{
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #gornypasek
 {
-    min-height: 12%;
+    height: 12%;
 }
 
 #dolnypasek
 {
     height: 88%;
+    min-height: 400px;
 }
 
 h3
 {
     font-style: italic;
     font-family: fantasy;
+    line-height: 200%;
 }
 
 img
@@ -65,9 +84,9 @@ img
 }
 
 button{
-    height: 60px;
-    width: 150px;
-    font-size: 150%;
+    height: 50px;
+    width: 120px;
+    font-size: 120%;
     color: white;
 }
 
@@ -81,6 +100,23 @@ button{
     font-size: 130%;
 }
 
-#zapiszsie{
+#zapiszsie1{
     display: none;
+}
+#zapiszsie2{
+    display: none;
+}
+#zapiszsie3{
+    display: none;
+}
+#zapiszsie4{
+    display: none;
+}
+.row{
+    height: 50%;
+}
+
+#podpowiedzi
+{
+    font-size: 50px;
 }

@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms"
 import { PasswordStrengthValidator } from "./password-strength.validators"
-import { EmailStrengthValidator } from './password-strength.validators';
+import { EmailStrengthValidator } from './password-strength.validators'
+import { NameStrengthValidator } from './password-strength.validators'
+import { SurnameStrengthValidator } from './password-strength.validators'
+import { NickStrengthValidator } from './password-strength.validators'
 
 @Component({
   selector: 'app-form',
@@ -18,6 +21,9 @@ export class FormComponent implements OnInit {
     this.form = fb.group({
       password: ['', [Validators.required, PasswordStrengthValidator]],
       email: ['', [Validators.required, EmailStrengthValidator]],
+      name: ['', [Validators.required, NameStrengthValidator]],
+      surname: ['', [Validators.required, SurnameStrengthValidator]],
+      nick: ['', [Validators.required, NickStrengthValidator]]
     });
 
 

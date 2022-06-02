@@ -10,6 +10,13 @@
 <body>
   <app-root></app-root>
   <script>
+  function dark2(elem) {
+    elem.style.backgroundColor = "cornflowerblue"
+  }
+  function light2(elem) {
+    elem.style.backgroundColor = "beige"
+  }
+
     function dark() {
       document.body.style.backgroundColor = "black"
       document.body.style.color = "white"
@@ -17,8 +24,11 @@
       document.getElementById("logo").style.backgroundColor = "blue"
       document.getElementById("wyborgry").style.backgroundColor = "MidnightBlue"
       document.getElementById("wyborregionu").style.backgroundColor = "MidnightBlue"
-      document.getElementById("kontent").style.backgroundColor = "cornflowerblue"
+      const items = document.querySelectorAll("#kontent");
+      items.forEach(dark2);
+      document.getElementById("kontent2").style.backgroundColor = "cornflowerblue"
   }
+
     function light() {
       document.body.style.backgroundColor = "beige"
       document.body.style.color = "black"
@@ -27,6 +37,9 @@
       document.getElementById("wyborgry").style.backgroundColor = "hotpink"
       document.getElementById("wyborregionu").style.backgroundColor = "hotpink"
       document.getElementById("kontent").style.backgroundColor = "beige"
+      const items = document.querySelectorAll("#kontent");
+      items.forEach(light2);
+      document.getElementById("kontent2").style.backgroundColor = "beige"
   }
 
   function hide()
@@ -45,27 +58,27 @@
         <form (ngSubmit)="dodajStudenta($event)">
             <div class="row">
                 <div class="col-sm-12 form-group">
-                    <label>IMIE</label>
+                    <label>IMIE</label><br>
                     <input name="imie" type="text">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label>NAZWISKO</label>
+                    <label>NAZWISKO</label><br>
                     <input name="nazwisko" type="text">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label>TELEFON</label>
+                    <label>TELEFON</label><br>
                     <input name="nazwisko" type="text">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label>NICK</label>
+                    <label>NICK</label><br>
                     <input name="nick" type="text">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label>EMAIL</label>
+                    <label>EMAIL</label><br>
                     <input name="email" type="text">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label>DATA URODZENIA</label>
+                    <label>DATA URODZENIA</label><br>
                     <input name="email" type="date">
                 </div>
                 <div class="col-sm-12 form-group">
@@ -96,6 +109,27 @@
       a.insertAdjacentHTML('beforeend', b);
   }
 
+  function PokazPrzycisk(){
+      document.getElementById("zapiszsie1").style.display="initial";
+      document.getElementById("zapiszsie2").style.display="initial";
+      document.getElementById("zapiszsie3").style.display="initial";
+      document.getElementById("zapiszsie4").style.display="initial";
+  }
+
+  function DisablePrzyciski(){
+      document.getElementById("zapiszsie1").disabled=true;
+      document.getElementById("zapiszsie2").disabled=true;
+      document.getElementById("zapiszsie3").disabled=true;
+      document.getElementById("zapiszsie4").disabled=true;
+  }
+
+  function ZmienPodpowiedz1(){
+      document.getElementById("podpowiedzi").innerHTML = '<h3 id="podpowiedzi" style="font-size: 50px;line-height: 200%;">Teraz musisz wybrać<br>któryś z dostępnych<br>na stronie turniejów !!!</h3>'
+  }
+
+  function ZmienPodpowiedz2(){
+      document.getElementById("podpowiedzi").innerHTML = ''
+  }
   </script>
 </body>
 </html>

@@ -2,11 +2,12 @@ form{
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 130%;
 }
 
 #loginfo{
     margin-top: 50%;
-    font-size: 170%;
+    font-size: 200%;
 }
 
 #rej{

@@ -1,6 +1,6 @@
 
 <div class="row" id="cala">
-  <div class="col-sm-3 col-md-2">
+  <div class="col-sm-12 col-md-3 col-xl-2">
     <div class="row" id="logo">
       <div class="col">
         <img src=".\assets\logo.png" alt="Logo" height="90px" width="90px">
@@ -40,7 +40,7 @@
       <app-dodatkowy id="tryby"></app-dodatkowy>
     </div>
   </div>
-  <div class="col-sm-9 col-md-10">
+  <div class="col-md-9 col-xl-10">
     <div class="row" id="gornypasek">
       <div class="col-6" id="wyborgry">
         <h3>WYBÓR GRY</h3>
@@ -65,13 +65,51 @@
       </div>
     </div>
     <div class="row" id="dolnypasek">
-      <div [ngStyle]="{'background-image': 'url(' + selectedGame.img + ')'}" class="col" id="kontent"> 
-        <span *ngIf="selectedGame.name !== 'Wybierz gre...'"> Formularz zgłoszenia do turnieju w grze: {{selectedGame.name}}{{selectedGame.img}}</span>
-        <br>
-
-        <button id="zapiszsie" type="button" class="btn btn-info" onclick="appendForm();this.disabled=true">ZAPISZ SIĘ</button>
-
-        
+      <div class="col-9">
+        <div class="row">
+          <div [ngStyle]="{'background-image': 'url(' + selectedGame.img + ')'}" class="col-6" id="kontent"> 
+            <span *ngIf="selectedGame.name !== 'Wybierz gre...'"> Formularz zgłoszenia do turnieju w grze: {{selectedGame.name}}</span>
+            <br>
+    
+            <button id="zapiszsie1" type="button" class="btn btn-info" onclick="appendForm();DisablePrzyciski();ZmienPodpowiedz2()">ZAPISZ SIĘ</button>
+    
+            
+          </div>
+          <div [ngStyle]="{'background-image': 'url(' + selectedGame.img + ')'}" class="col-6" id="kontent"> 
+            <span *ngIf="selectedGame.name !== 'Wybierz gre...'"> Formularz zgłoszenia do turnieju w grze: {{selectedGame.name}}</span>
+            <br>
+    
+            <button id="zapiszsie2" type="button" class="btn btn-info" onclick="appendForm();DisablePrzyciski();ZmienPodpowiedz2()">ZAPISZ SIĘ</button>
+    
+            
+          </div>
+        </div>
+        <div class="row">
+          <div [ngStyle]="{'background-image': 'url(' + selectedGame.img + ')'}" class="col-6" id="kontent"> 
+            <span *ngIf="selectedGame.name !== 'Wybierz gre...'"> Formularz zgłoszenia do turnieju w grze: {{selectedGame.name}}</span>
+            <br>
+    
+            <button id="zapiszsie3" type="button" class="btn btn-info" onclick="appendForm();DisablePrzyciski();ZmienPodpowiedz2()">ZAPISZ SIĘ</button>
+    
+            
+          </div>
+          <div [ngStyle]="{'background-image': 'url(' + selectedGame.img + ')'}" class="col-6" id="kontent"> 
+            <span *ngIf="selectedGame.name !== 'Wybierz gre...'"> Formularz zgłoszenia do turnieju w grze: {{selectedGame.name}}</span>
+            <br>
+    
+            <button id="zapiszsie4" type="button" class="btn btn-info" onclick="appendForm();DisablePrzyciski();ZmienPodpowiedz2()">ZAPISZ SIĘ</button>
+    
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-3" id="kontent2">
+        <h3 id="podpowiedzi">
+          Aby zapisać się<br>
+          na turniej musisz<br>
+          się najpierw<br>
+          zarejestrować !!!
+        </h3>        
         <div id="newform"></div>
       </div>
     </div>
