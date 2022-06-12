@@ -14,7 +14,7 @@
     elem.style.backgroundColor = "cornflowerblue"
   }
   function light2(elem) {
-    elem.style.backgroundColor = "beige"
+    elem.style.backgroundColor = "rgb(246, 246, 246)"
   }
 
     function dark() {
@@ -27,87 +27,30 @@
       const items = document.querySelectorAll("#kontent");
       items.forEach(dark2);
       document.getElementById("kontent2").style.backgroundColor = "cornflowerblue"
+      document.getElementById("a").hidden=true;
+      document.getElementById("b").hidden=false;
   }
 
     function light() {
       document.body.style.backgroundColor = "beige"
       document.body.style.color = "black"
-      document.getElementById("sidebar").style.backgroundColor = "lightblue"
-      document.getElementById("logo").style.backgroundColor = "yellow"
-      document.getElementById("wyborgry").style.backgroundColor = "hotpink"
-      document.getElementById("wyborregionu").style.backgroundColor = "hotpink"
-      document.getElementById("kontent").style.backgroundColor = "beige"
+      document.getElementById("sidebar").style.backgroundColor = "rgb(231, 231, 231)"
+      document.getElementById("logo").style.backgroundColor = "white"
+      document.getElementById("wyborgry").style.backgroundColor = "rgb(231, 231, 231)"
+      document.getElementById("wyborregionu").style.backgroundColor = "rgb(231, 231, 231)"
       const items = document.querySelectorAll("#kontent");
       items.forEach(light2);
-      document.getElementById("kontent2").style.backgroundColor = "beige"
+      document.getElementById("kontent2").style.backgroundColor = "rgb(231, 231, 231)"
+      document.getElementById("a").hidden=false;
+      document.getElementById("b").hidden=true;
   }
 
   function hide()
   {
       document.getElementById('finalny').hidden=true;
-      let a = document.getElementById("newform")
-      let b = '<h1>Gratulacje!!!<br>Udało ci się zarejestrować</h1>'
-      a.insertAdjacentHTML('beforeend', b);
+      document.getElementById("podpowiedzi").innerHTML = '<h3 id="podpowiedzi" style="font-size: 34px;">Gratulacje!!!<br>Udało ci się zarejestrować !!!'
   }
 
-  function appendForm()
-  {
-      let a = document.getElementById("newform")
-      let b = `<div id="finalny" class="row">
-    <div class="col-xs-12 col-lg-12" id="lol">
-        <form (ngSubmit)="dodajStudenta($event)">
-            <div class="row">
-                <div class="col-sm-12 form-group">
-                    <label>IMIE</label><br>
-                    <input name="imie" type="text">
-                </div>
-                <div class="col-sm-12 form-group">
-                    <label>NAZWISKO</label><br>
-                    <input name="nazwisko" type="text">
-                </div>
-                <div class="col-sm-12 form-group">
-                    <label>TELEFON</label><br>
-                    <input name="nazwisko" type="text">
-                </div>
-                <div class="col-sm-12 form-group">
-                    <label>NICK</label><br>
-                    <input name="nick" type="text">
-                </div>
-                <div class="col-sm-12 form-group">
-                    <label>EMAIL</label><br>
-                    <input name="email" type="text">
-                </div>
-                <div class="col-sm-12 form-group">
-                    <label>DATA URODZENIA</label><br>
-                    <input name="email" type="date">
-                </div>
-                <div class="col-sm-12 form-group">
-                    <label>PŁEĆ:</label><br>
-                    <label>mężczyzna</label>
-                    <input name="email" type="radio" value="mężczyzna"><br>
-                    <label>kobieta</label>
-                    <input name="email" type="radio" value="kobieta">
-                </div>
-             </div>
-             <hr>
-             <div class="row">
-                <div class="col-xs-12 col-lg-12">
-                    <div class="row">
-                        <div class="col-4form-group">
-                        </div>
-                        <div class="col-sm-4form-group">
-                            <button class="btn btn-success" type="button" onclick="hide()">ZALOGUJ</button>
-                            <button class="btn btn-danger" type="button">MOŻE BYĆ TU WYLOGUJ</button>
-                            <button class="btn btn-primary" type="reset">WYCZYŚĆ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>`
-      a.insertAdjacentHTML('beforeend', b);
-  }
 
   function PokazPrzycisk(){
       document.getElementById("zapiszsie1").style.display="initial";
@@ -124,7 +67,7 @@
   }
 
   function ZmienPodpowiedz1(){
-      document.getElementById("podpowiedzi").innerHTML = '<h3 id="podpowiedzi" style="font-size: 45px;line-height: 200%;">Teraz musisz wybrać któryś z dostępnych na stronie turniejów !!!</h3>'
+      document.getElementById("podpowiedzi").innerHTML = '<p id="podpowiedzi" style="font-size: 24px;">Teraz musisz wybrać któryś z dostępnych na stronie turniejów !!!</p>'
   }
 
   function ZmienPodpowiedz2(){

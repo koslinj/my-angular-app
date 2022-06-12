@@ -7,32 +7,36 @@ table
 }
 #p1
 {
-    height: 60px;
+    height: 30px;
     width: 90%;
     border: 2px solid yellowgreen;
     border-radius: 20px;
     background-color: yellow;
-    font-family: Georgia;
-    font-size: larger;
+    font-size: 100%;
+    font-style: italic;
+    font-family: fantasy;
+    letter-spacing: 2px;
     transition: transform 1s;
 }
 #p2
 {
-    height: 60px;
+    height: 30px;
     width: 90%;
     border: 2px solid black;
     border-radius: 20px;
     background-color: blue;
     color: white;
-    font-family: Georgia;
-    font-size: larger;
+    font-size: 100%;
+    font-style: italic;
+    font-family: fantasy;
+    letter-spacing: 2px;
     transition: transform 1s;
-    margin-top: 10px
+    margin-top: 2px
 }
 td
 {
-    width: 50%;
-    padding: 3%;
+    width: 40%;
+    padding: 1%;
 }
 #p1:hover{
     color: red;

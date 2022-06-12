@@ -4,8 +4,7 @@
         Zalogowany jako:<br>
         IMIE: &nbsp;<span>{{daneStudenta.imie}}</span><br>
         NAZWISKO: &nbsp;<span>{{daneStudenta.nazwisko}}</span><br>
-        NICK: &nbsp;<span>{{daneStudenta.nick}}</span><br>
-        E-MAIL: &nbsp;<span>{{daneStudenta.email}}</span><br>
+        NICK: &nbsp;<span style="font-style: italic;">{{daneStudenta.nick}}</span><br>
     </p>
 
 <div class="row" id="rej">
@@ -13,8 +12,8 @@
         <form (ngSubmit)="dodajStudenta($event)" [formGroup]="form">
             <div class="row">
                 <div class="col-sm-12 form-group">
-                    <label>IMIĘ</label><br>
-                    <input size="15" name="imie" type="text" formControlName = "name">
+                    <br><label>IMIĘ</label><br>
+                    <input size="16" name="imie" type="text" formControlName = "name">
                     <div class="errors" *ngIf="form.get('name').invalid && (form.get('name').touched || form.get('name').dirty)">
                         <div *ngIf="form.get('name').hasError('required')">
                           Należy wpisać imię!!!
@@ -26,7 +25,7 @@
                 </div>
                 <div class="col-sm-12 form-group">
                     <label>NAZWISKO</label><br>
-                    <input size="15" name="nazwisko" type="text" formControlName = "surname">
+                    <input size="16" name="nazwisko" type="text" formControlName = "surname">
                     <div class="errors" *ngIf="form.get('surname').invalid && (form.get('surname').touched || form.get('surname').dirty)">
                         <div *ngIf="form.get('surname').hasError('required')">
                           Należy wpisać nazwisko!!!
@@ -38,7 +37,7 @@
                 </div>
                 <div class="col-sm-12 form-group">
                     <label onloadeddata="UkryjZapiszSie()">NICK</label><br>
-                    <input size="15" name="nick" type="text" formControlName="nick">
+                    <input size="16" name="nick" type="text" formControlName="nick">
                     <div class="errors" *ngIf="form.get('nick').invalid && (form.get('nick').touched || form.get('nick').dirty)">
                         <div *ngIf="form.get('nick').hasError('required')">
                           Należy wpisać nick!!!
@@ -50,7 +49,7 @@
                 </div>
                 <div class="col-sm-12 form-group">
                     <label>HASLO</label><br>
-                    <input size="15" name="haslo" type="password" formControlName="password">
+                    <input size="16" name="haslo" type="password" formControlName="password">
                     <div class="errors" *ngIf="form.get('password').invalid && (form.get('password').touched || form.get('password').dirty)">
                         <div *ngIf="form.get('password').hasError('required')">
                           Należy wpisać hasło!!!
@@ -62,7 +61,7 @@
                 </div>
                 <div class="col-sm-12 form-group">
                     <label>EMAIL</label><br>
-                    <input size="15" name="email" type="text" formControlName="email">
+                    <input size="16" name="email" type="text" formControlName="email">
                     <div class="errors" *ngIf="form.get('email').invalid && (form.get('email').touched || form.get('email').dirty)">
                         <div *ngIf="form.get('email').hasError('required')">
                           Należy wpisać email!!!
@@ -77,14 +76,13 @@
              <div class="row">
                 <div class="col-xs-12 col-lg-12">
                     <div class="row">
-                        <div class="col-4form-group">
-                        </div>
-                        <div class="col-sm-4form-group">
+                        <div class="col-lg-12form-group">
                             <button *ngIf="form.get('password').valid && form.get('email').valid && form.get('name').valid && form.get('surname').valid && form.get('nick').valid; else elseBlock"  class="btn btn-success" type="submit" onclick="document.getElementById('rej').hidden=true;PokazPrzycisk();ZmienPodpowiedz1()">ZALOGUJ</button>
                             <ng-template #elseBlock>
                                 <button class="btn btn-success" type="submit" [disabled]="true">ZALOGUJ</button>
                             </ng-template>
-                            <button class="btn btn-danger" type="button">MOŻE BYĆ TU WYLOGUJ</button>
+                        </div>
+                        <div class="col-lg-12form-group">
                             <button class="btn btn-primary" type="reset">WYCZYŚĆ</button>
                         </div>
                     </div>

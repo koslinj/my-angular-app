@@ -2,97 +2,112 @@
 #cala
 {
     text-align: center;
-    border: 2px solid black;
-    min-height: 1100px;
+    min-height: 650px;
 }
 
 #logo
 {
-    background-color: yellow;
-    border: 2px solid black;
+    background-color: white;
+    border: 1px solid blue;
     border-radius: 4px;
     height: 20%;
+    min-height: 125px;
 }
 
 #sidebar
 {
-    background-color: lightblue;
-    border: 2px solid black;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid blue;
     border-radius: 4px;
     height: 80%;
 }
 
 #wyborgry
 {
-    background-color: hotpink;
-    border: 2px solid black;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid blue;
     border-radius: 4px;
-    min-height: 400px
+    min-height: 80px;
 }
 
 #wyborregionu
 {
-    background-color: hotpink;
-    border: 2px solid black;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid blue;
     border-radius: 4px;
-    min-height: 400px
+    min-height: 80px;
 }
 
 #kontent
 {
-    background-color: beige;
-    border: 2px solid black;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid blue;
     border-radius: 4px;
+    min-height: 200px;
 }
 
 #kontent2
 {
-    background-color: beige;
-    border: 2px solid black;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid blue;
     border-radius: 4px;
     position: relative;
     text-align: center;
+    min-height: 500px;
 }
 
 #podpowiedzi
 {
-    font-size: 45px;
+    font-size: 24px;
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     left: 5%;
     right: 5%;
+    word-break: break-word;
 }
 
 #wybranagra
 {
     position: absolute;
-    top: 0;
+    top: 2%;
     left: 5%;
     right: 5%;
-    font-size: 180%;
+    font-size: 90%;
+    height: 20%;
 }
 
 #zdjgry
 {
     position: absolute;
-    top: 20%;
-    left: 3%;
-    right: 3%;
-    width: 94%;
-    height: 32%;
+    top: 10%;
+    left: 2%;
+    right: 2%;
+    width: 96%;
+    height: 50%;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
+#finalny
+{
+    font-size: 70%;
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 52%;
+}
+input{
+    width: 100%;
+}
+
 #gornypasek
 {
-    height: 12%;
+    height: 18%;
 }
 
 #dolnypasek
 {
-    height: 88%;
-    min-height: 400px;
+    height: 82%;
 }
 
 h3
@@ -102,16 +117,27 @@ h3
     line-height: 200%;
 }
 
+h4{
+    font-size: 100% ;
+    margin-top: 6px;
+    font-style: italic;
+    font-family: fantasy;
+    letter-spacing: 4px;
+}
+
 img
 {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 button{
-    height: 50px;
+    height: 34px;
     width: 120px;
-    font-size: 120%;
+    font-size: 90%;
     color: white;
+    font-style: italic;
+    font-family: fantasy;
+    letter-spacing: 2px;
 }
 
 #tryby
@@ -120,9 +146,6 @@ button{
     margin-bottom: 10%;
 }
 
-#newform{
-    font-size: 130%;
-}
 
 #zapiszsie1{
     display: none;
@@ -138,4 +161,69 @@ button{
 }
 .row{
     height: 50%;
+}
+
+.errors{
+    font-size: 110%;
+    color: red;
+}
+
+#kwadratbackground1
+{
+    background-image: url("../assets/atlas.jpg");
+    background-repeat: round;
+}
+
+#kwadratbackground2
+{
+    background-image: url("../assets/turn2.webp");
+    background-repeat: round;
+}
+
+#kwadratbackground3
+{
+    background-image: url("../assets/turn3.jpg");
+    background-repeat: round;
+}
+
+#kwadratbackground4
+{
+    background-image: url("../assets/turn4.png");
+    background-repeat: round;
+}
+
+#kwadratbackground5
+{
+    background-image: url("../assets/turn5.jpg");
+    background-repeat: round;
+}
+
+#kwadratbackground6
+{
+    background-image: url("../assets/turn6.jpg");
+    background-repeat: round;
+}
+
+#kwadratbackground7
+{
+    background-image: url("../assets/turn7.jpg");
+    background-repeat: round;
+}
+
+#kwadratbackground8
+{
+    background-image: url("../assets/turn8.jpg");
+    background-repeat: round;
+}
+
+#aha
+{
+    min-height: 400px;
+}
+
+.card-header{
+    font-style: italic;
+    font-family: fantasy;
+    letter-spacing: 2px;
+    font-size: 90%;
 }
