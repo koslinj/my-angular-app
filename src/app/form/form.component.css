@@ -13,6 +13,12 @@ form{
     letter-spacing: 2px;
 }
 
+label
+{
+    font-style: oblique;
+    font-weight: 700;
+}
+
 #rej{
     font-size: 120%;
 }

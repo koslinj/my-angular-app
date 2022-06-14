@@ -259,7 +259,7 @@
                         <div class="col-xs-12 col-lg-12">
                             <div class="row">
                                 <div>
-                                    <button class="btn btn-success" type="button" *ngIf="form.get('tel').valid && form.get('email').valid && form.get('name').valid && form.get('surname').valid && form.get('nick').valid && form.get('date').valid; else elseBlock" onclick="hide(); document.getElementById('wybranagra').innerHTML=''">ZALOGUJ</button>
+                                    <button style="font-size: 120%;" class="btn btn-success" type="button" *ngIf="form.get('tel').valid && form.get('email').valid && form.get('name').valid && form.get('surname').valid && form.get('nick').valid && form.get('date').valid; else elseBlock" onclick="hide(); document.getElementById('wybranagra').innerHTML=''">ZAPISZ SIĘ</button>
                                     <ng-template #elseBlock>
                                       <button style="font-size: 120%;" class="btn btn-success" type="submit" [disabled]="true">ZAPISZ SIĘ</button>
                                     </ng-template>

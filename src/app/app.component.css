@@ -168,6 +168,12 @@ button{
     color: red;
 }
 
+label
+{
+    font-style: oblique;
+    font-weight: 700;
+}
+
 #kwadratbackground1
 {
     background-image: url("../assets/atlas.jpg");
